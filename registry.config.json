@@ -1,0 +1,85 @@
+{
+    "$comment": "Hand-edited input for tools/build-manifest.mjs. Everything here is merged on top of the data pulled from each addon repo's package.json / GitHub metadata. Edit this file, never manifest.json.",
+    "registry": {
+        "manifestVersion": 1,
+        "id": "polyphase-recomps",
+        "name": "Polyphase Engine Recomps Addons",
+        "description": "Addon registry for Polyphase Engine Recomps: native runtimes for games recompiled from community decompilation projects. Machine-readable index of every recomp addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon. No game code or assets are distributed; each port builds against the user's own legally obtained copy.",
+        "vendor": "Polyphase Recomps",
+        "homepage": "https://github.com/polyphase-recomps/Polyphase-Engine-Recomps-Addons"
+    },
+    "categories": [
+        {
+            "id": "base",
+            "name": "Base",
+            "description": "Shared layers used by every recomp runtime (mod support, settings, scaling)."
+        },
+        {
+            "id": "platforms",
+            "name": "Platforms",
+            "description": "Per-console runtimes that replace the original hardware and SDK so decompiled games build and run natively."
+        },
+        {
+            "id": "games",
+            "name": "Games",
+            "description": "Game packages that build a specific decompiled game against a platform runtime."
+        }
+    ],
+    "overrides": {
+        "com.recomp.mod.base": {
+            "name": "Recomp Mod Base",
+            "summary": "Mod layer shared by the recomp runtimes: mod maps, mod settings, generated settings UI, resolution scaler and Recomp/Mods Lua.",
+            "category": "base",
+            "tags": [
+                "recomp",
+                "mods",
+                "modding",
+                "settings",
+                "lua",
+                "core"
+            ]
+        },
+        "com.recomp.gba": {
+            "name": "Game Boy Advance (GBA) Recomp",
+            "summary": "Shared runtime for native GBA ports, with the GbaPlayer node that plays a decompiled game in Polyphase.",
+            "category": "platforms",
+            "tags": [
+                "recomp",
+                "gba",
+                "game-boy-advance",
+                "nintendo",
+                "handheld",
+                "decomp",
+                "m4a"
+            ]
+        },
+        "com.recomp.n64": {
+            "name": "Nintendo 64 (N64) Recomp",
+            "summary": "Shared runtime for natively compiled N64 decomps: libultra shim, F3DEX2 renderer, audio and host backends.",
+            "category": "platforms",
+            "tags": [
+                "recomp",
+                "n64",
+                "nintendo-64",
+                "nintendo",
+                "decomp",
+                "libultra",
+                "f3dex2"
+            ]
+        },
+        "com.recomp.ps1": {
+            "name": "PlayStation (PS1) Recomp",
+            "summary": "PS1 recompilation runtime that builds fully decompiled PS1 games natively and plays them with the Ps1Player node.",
+            "category": "platforms",
+            "tags": [
+                "recomp",
+                "ps1",
+                "playstation",
+                "psx",
+                "sony",
+                "decomp",
+                "psyq"
+            ]
+        }
+    }
+}

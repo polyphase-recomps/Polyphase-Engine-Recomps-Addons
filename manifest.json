@@ -1,0 +1,220 @@
+{
+    "manifestVersion": 1,
+    "id": "polyphase-recomps",
+    "name": "Polyphase Engine Recomps Addons",
+    "description": "Addon registry for Polyphase Engine Recomps: native runtimes for games recompiled from community decompilation projects. Machine-readable index of every recomp addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon. No game code or assets are distributed; each port builds against the user's own legally obtained copy.",
+    "vendor": "Polyphase Recomps",
+    "homepage": "https://github.com/polyphase-recomps/Polyphase-Engine-Recomps-Addons",
+    "updated": "2026-10-05",
+    "packageCount": 4,
+    "categories": [
+        {
+            "id": "base",
+            "name": "Base",
+            "description": "Shared layers used by every recomp runtime (mod support, settings, scaling)."
+        },
+        {
+            "id": "platforms",
+            "name": "Platforms",
+            "description": "Per-console runtimes that replace the original hardware and SDK so decompiled games build and run natively."
+        },
+        {
+            "id": "games",
+            "name": "Games",
+            "description": "Game packages that build a specific decompiled game against a platform runtime."
+        }
+    ],
+    "packages": [
+        {
+            "id": "com.recomp.mod.base",
+            "name": "Recomp Mod Base",
+            "summary": "Mod layer shared by the recomp runtimes: mod maps, mod settings, generated settings UI, resolution scaler and Recomp/Mods Lua.",
+            "description": "Mod layer shared by the recomp runtimes (PS1, GameCube, N64, GBA): mod maps, end-user mod settings, generated settings UI, resolution scaler, Recomp/Mods Lua",
+            "category": "base",
+            "type": "plugin",
+            "tags": [
+                "recomp",
+                "mods",
+                "modding",
+                "settings",
+                "lua",
+                "core"
+            ],
+            "version": "1.0.0",
+            "author": null,
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.recomp.mod.base",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/polyphase-recomps/com.recomp.mod.base",
+                "clone": "https://github.com/polyphase-recomps/com.recomp.mod.base.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.mod.base/main/package.json",
+                "readme": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.mod.base/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/polyphase-recomps/com.recomp.mod.base/releases",
+                "issues": "https://github.com/polyphase-recomps/com.recomp.mod.base/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-10-05T02:22:17Z",
+            "status": "published"
+        },
+        {
+            "id": "com.recomp.gba",
+            "name": "Game Boy Advance (GBA) Recomp",
+            "summary": "Shared runtime for native GBA ports, with the GbaPlayer node that plays a decompiled game in Polyphase.",
+            "description": "Shared runtime for native GBA ports: hardware replacement, build tools and the GbaPlayer node that plays a decompiled game in Polyphase.",
+            "category": "platforms",
+            "type": "plugin",
+            "tags": [
+                "recomp",
+                "gba",
+                "game-boy-advance",
+                "nintendo",
+                "handheld",
+                "decomp",
+                "m4a"
+            ],
+            "version": "1.0.0",
+            "author": null,
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.recomp.gba",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {
+                "com.recomp.mod.base": "https://github.com/polyphase-recomps/com.recomp.mod.base"
+            },
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/polyphase-recomps/com.recomp.gba",
+                "clone": "https://github.com/polyphase-recomps/com.recomp.gba.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.gba/main/package.json",
+                "readme": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.gba/main/README.md",
+                "documentation": "https://github.com/polyphase-recomps/com.recomp.gba/tree/main/Docs",
+                "releases": "https://github.com/polyphase-recomps/com.recomp.gba/releases",
+                "issues": "https://github.com/polyphase-recomps/com.recomp.gba/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-10-05T02:32:14Z",
+            "status": "published"
+        },
+        {
+            "id": "com.recomp.n64",
+            "name": "Nintendo 64 (N64) Recomp",
+            "summary": "Shared runtime for natively compiled N64 decomps: libultra shim, F3DEX2 renderer, audio and host backends.",
+            "description": "Shared runtime for natively compiled N64 decomps (libultra shim, F3DEX2 renderer, audio, host backends, build rules). Game packages such as com.recomp.ssb64 build against Native/.",
+            "category": "platforms",
+            "type": "plugin",
+            "tags": [
+                "recomp",
+                "n64",
+                "nintendo-64",
+                "nintendo",
+                "decomp",
+                "libultra",
+                "f3dex2"
+            ],
+            "version": "1.0.0",
+            "author": null,
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.recomp.n64",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {},
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/polyphase-recomps/com.recomp.n64",
+                "clone": "https://github.com/polyphase-recomps/com.recomp.n64.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.n64/main/package.json",
+                "readme": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.n64/main/README.md",
+                "documentation": "https://github.com/polyphase-recomps/com.recomp.n64/tree/main/Docs",
+                "releases": "https://github.com/polyphase-recomps/com.recomp.n64/releases",
+                "issues": "https://github.com/polyphase-recomps/com.recomp.n64/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-10-05T02:31:08Z",
+            "status": "published"
+        },
+        {
+            "id": "com.recomp.ps1",
+            "name": "PlayStation (PS1) Recomp",
+            "summary": "PS1 recompilation runtime that builds fully decompiled PS1 games natively and plays them with the Ps1Player node.",
+            "description": "PS1 recompilation runtime: builds 100%-decompiled PS1 games natively and plays them with the Ps1Player node",
+            "category": "platforms",
+            "type": "plugin",
+            "tags": [
+                "recomp",
+                "ps1",
+                "playstation",
+                "psx",
+                "sony",
+                "decomp",
+                "psyq"
+            ],
+            "version": "1.0.0",
+            "author": null,
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.recomp.ps1",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {
+                "com.recomp.mod.base": "https://github.com/polyphase-recomps/com.recomp.mod.base"
+            },
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/polyphase-recomps/com.recomp.ps1",
+                "clone": "https://github.com/polyphase-recomps/com.recomp.ps1.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.ps1/main/package.json",
+                "readme": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.ps1/main/README.md",
+                "documentation": "https://github.com/polyphase-recomps/com.recomp.ps1/tree/main/Docs",
+                "releases": "https://github.com/polyphase-recomps/com.recomp.ps1/releases",
+                "issues": "https://github.com/polyphase-recomps/com.recomp.ps1/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-10-05T02:31:33Z",
+            "status": "published"
+        }
+    ]
+}

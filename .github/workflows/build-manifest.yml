@@ -1,0 +1,75 @@
+name: Build manifest
+
+on:
+  # Every commit on every branch. The rebuild is cheap and the commit step is a
+  # no-op when manifest.json does not change.
+  push:
+    branches: ['**']
+  pull_request:
+  schedule:
+    # Nightly refresh so version / release / description changes in addon repos land here.
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+  # Addon repos can push an update immediately:
+  #   gh api repos/polyphase-recomps/Polyphase-Engine-Recomps-Addons/dispatches \
+  #     -f event_type=addon-updated
+  repository_dispatch:
+    types: [addon-updated]
+
+concurrency:
+  # One run per branch; a newer commit supersedes an in-flight rebuild.
+  group: build-manifest-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Check out the branch itself, not the detached commit, so the push has a target.
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rebuild manifest.json
+        env:
+          # REGISTRY_TOKEN is only needed if any addon repo is private.
+          GH_TOKEN: ${{ secrets.REGISTRY_TOKEN || secrets.GITHUB_TOKEN }}
+        run: node tools/build-manifest.mjs
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- manifest.json; then
+            echo "manifest.json unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manifest.json
+          # [skip ci] stops this commit from triggering another run of this workflow.
+          git commit -m "Chore: Rebuild manifest.json from addon repositories [skip ci]"
+          git push origin HEAD:${{ github.head_ref || github.ref_name }}
+
+  # Fork PRs cannot be committed to from this repo, so they get a check instead.
+  check:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify manifest.json is current
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/build-manifest.mjs --check
