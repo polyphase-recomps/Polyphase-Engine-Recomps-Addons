@@ -5,7 +5,7 @@
     "description": "Addon registry for Polyphase Engine Recomps: native runtimes for games recompiled from community decompilation projects. Machine-readable index of every recomp addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon. No game code or assets are distributed; each port builds against the user's own legally obtained copy.",
     "vendor": "Polyphase Recomps",
     "homepage": "https://github.com/polyphase-recomps/Polyphase-Engine-Recomps-Addons",
-    "updated": "2026-10-06",
+    "updated": "2026-10-07",
     "packageCount": 4,
     "categories": [
         {
@@ -68,7 +68,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-05T05:23:53Z",
+            "updatedAt": "2026-10-07T04:47:51Z",
             "status": "published"
         },
         {
@@ -124,7 +124,7 @@
             "id": "com.recomp.n64",
             "name": "Nintendo 64 (N64) Recomp",
             "summary": "Shared runtime for natively compiled N64 decomps: libultra shim, F3DEX2 renderer, audio and host backends.",
-            "description": "Shared runtime for natively compiled N64 decomps (libultra shim, F3DEX2 renderer, audio, host backends, build rules). Game packages such as com.recomp.ssb64 build against Native/.",
+            "description": "Shared runtime for N64 games built from a decomp or recompiled from the player's ROM (libultra, F3DEX2 renderer, audio, host backends, N64Recomp, build rules, game launcher). Game packages such as com.recomp.ssb64 build against it.",
             "category": "platforms",
             "type": "plugin",
             "tags": [
@@ -148,7 +148,9 @@
             },
             "platforms": [],
             "buildTargets": [],
-            "dependencies": {},
+            "dependencies": {
+                "com.recomp.mod.base": "https://github.com/polyphase-recomps/com.recomp.mod.base"
+            },
             "repository": {
                 "type": "git",
                 "url": "https://github.com/polyphase-recomps/com.recomp.n64",
@@ -164,7 +166,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-06T05:50:02Z",
+            "updatedAt": "2026-10-06T21:21:24Z",
             "status": "published"
         },
         {
@@ -213,7 +215,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-05T02:31:33Z",
+            "updatedAt": "2026-10-07T04:09:37Z",
             "status": "published"
         }
     ]
