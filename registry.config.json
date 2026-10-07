@@ -39,6 +39,19 @@
                 "core"
             ]
         },
+        "com.recomp.netplay": {
+            "name": "Recomp Netplay",
+            "summary": "Networked multiplayer for the recomp runtimes (N64 first): lockstep input sync over UDP, LAN discovery and IP:port joining, save sync and desync detection.",
+            "category": "base",
+            "tags": [
+                "recomp",
+                "netplay",
+                "multiplayer",
+                "networking",
+                "lockstep",
+                "core"
+            ]
+        },
         "com.recomp.gba": {
             "name": "Game Boy Advance (GBA) Recomp",
             "summary": "Shared runtime for native GBA ports, with the GbaPlayer node that plays a decompiled game in Polyphase.",
@@ -51,6 +64,19 @@
                 "handheld",
                 "decomp",
                 "m4a"
+            ]
+        },
+        "com.recomp.gcn": {
+            "name": "Nintendo GameCube (GCN) Recomp",
+            "summary": "GameCube recompilation runtime that builds decompiled GameCube games natively and plays them with the GcnPlayer node.",
+            "category": "platforms",
+            "tags": [
+                "recomp",
+                "gcn",
+                "gamecube",
+                "nintendo",
+                "decomp",
+                "dolphin-sdk"
             ]
         },
         "com.recomp.n64": {

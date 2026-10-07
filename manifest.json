@@ -6,7 +6,7 @@
     "vendor": "Polyphase Recomps",
     "homepage": "https://github.com/polyphase-recomps/Polyphase-Engine-Recomps-Addons",
     "updated": "2026-10-07",
-    "packageCount": 4,
+    "packageCount": 6,
     "categories": [
         {
             "id": "base",
@@ -68,7 +68,57 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-07T04:47:51Z",
+            "updatedAt": "2026-10-07T06:45:09Z",
+            "status": "published"
+        },
+        {
+            "id": "com.recomp.netplay",
+            "name": "Recomp Netplay",
+            "summary": "Networked multiplayer for the recomp runtimes (N64 first): lockstep input sync over UDP, LAN discovery and IP:port joining, save sync and desync detection.",
+            "description": "Networked multiplayer for the recomp game runtimes (N64 first): lockstep input sync over UDP, LAN discovery and IP:port joining, save sync, desync detection. Cross-platform (Windows, Linux, macOS).",
+            "category": "base",
+            "type": "plugin",
+            "tags": [
+                "recomp",
+                "netplay",
+                "multiplayer",
+                "networking",
+                "lockstep",
+                "core"
+            ],
+            "version": "1.0.0",
+            "author": null,
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.recomp.netplay",
+                "resolveMode": "source"
+            },
+            "platforms": [
+                "Windows"
+            ],
+            "buildTargets": [],
+            "dependencies": {
+                "com.recomp.mod.base": "https://github.com/polyphase-recomps/com.recomp.mod.base"
+            },
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/polyphase-recomps/com.recomp.netplay",
+                "clone": "https://github.com/polyphase-recomps/com.recomp.netplay.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.netplay/main/package.json",
+                "readme": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.netplay/main/README.md",
+                "documentation": null,
+                "releases": "https://github.com/polyphase-recomps/com.recomp.netplay/releases",
+                "issues": "https://github.com/polyphase-recomps/com.recomp.netplay/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-10-07T06:44:08Z",
             "status": "published"
         },
         {
@@ -121,6 +171,54 @@
             "status": "published"
         },
         {
+            "id": "com.recomp.gcn",
+            "name": "Nintendo GameCube (GCN) Recomp",
+            "summary": "GameCube recompilation runtime that builds decompiled GameCube games natively and plays them with the GcnPlayer node.",
+            "description": "GameCube recompilation runtime: builds decompiled GameCube games natively (portable C) and plays them with the GcnPlayer node; Lua table Gcn and C mods",
+            "category": "platforms",
+            "type": "plugin",
+            "tags": [
+                "recomp",
+                "gcn",
+                "gamecube",
+                "nintendo",
+                "decomp",
+                "dolphin-sdk"
+            ],
+            "version": "1.0.0",
+            "author": null,
+            "license": null,
+            "engine": {
+                "target": "engine",
+                "apiVersion": 3,
+                "entrySymbol": "PolyphasePlugin_GetDesc",
+                "binaryName": "com.recomp.gcn",
+                "resolveMode": "source"
+            },
+            "platforms": [],
+            "buildTargets": [],
+            "dependencies": {
+                "com.recomp.mod.base": "https://github.com/polyphase-recomps/com.recomp.mod.base"
+            },
+            "repository": {
+                "type": "git",
+                "url": "https://github.com/polyphase-recomps/com.recomp.gcn",
+                "clone": "https://github.com/polyphase-recomps/com.recomp.gcn.git",
+                "branch": "main"
+            },
+            "urls": {
+                "manifest": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.gcn/main/package.json",
+                "readme": "https://raw.githubusercontent.com/polyphase-recomps/com.recomp.gcn/main/README.md",
+                "documentation": "https://github.com/polyphase-recomps/com.recomp.gcn/tree/main/Docs",
+                "releases": "https://github.com/polyphase-recomps/com.recomp.gcn/releases",
+                "issues": "https://github.com/polyphase-recomps/com.recomp.gcn/issues"
+            },
+            "latestRelease": null,
+            "prebuiltBinaries": [],
+            "updatedAt": "2026-10-07T06:25:27Z",
+            "status": "published"
+        },
+        {
             "id": "com.recomp.n64",
             "name": "Nintendo 64 (N64) Recomp",
             "summary": "Shared runtime for natively compiled N64 decomps: libultra shim, F3DEX2 renderer, audio and host backends.",
@@ -166,7 +264,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-06T21:21:24Z",
+            "updatedAt": "2026-10-07T06:43:24Z",
             "status": "published"
         },
         {
@@ -215,7 +313,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-07T04:09:37Z",
+            "updatedAt": "2026-10-07T06:50:18Z",
             "status": "published"
         }
     ]

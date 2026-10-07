@@ -2,7 +2,9 @@
     "name": "Polyphase Engine Recomps Addons",
     "addons": [
         "https://github.com/polyphase-recomps/com.recomp.mod.base",
+        "https://github.com/polyphase-recomps/com.recomp.netplay",
         "https://github.com/polyphase-recomps/com.recomp.gba",
+        "https://github.com/polyphase-recomps/com.recomp.gcn",
         "https://github.com/polyphase-recomps/com.recomp.n64",
         "https://github.com/polyphase-recomps/com.recomp.ps1"
     ]

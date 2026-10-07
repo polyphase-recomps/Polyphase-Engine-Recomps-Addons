@@ -11,12 +11,14 @@ No game code, ROMs, disc images or assets are hosted or distributed here. Each p
 | Name | Description |
 | --- | --- |
 | [Recomp Mod Base](https://github.com/polyphase-recomps/com.recomp.mod.base) | Mod layer shared by the recomp runtimes: mod maps, mod settings, generated settings UI, resolution scaler and Recomp/Mods Lua. |
+| [Recomp Netplay](https://github.com/polyphase-recomps/com.recomp.netplay) | Networked multiplayer for the recomp runtimes (N64 first): lockstep input sync over UDP, LAN discovery and IP:port joining, save sync and desync detection. |
 
 ## Platforms
 
 | Name | Description |
 | --- | --- |
 | [Game Boy Advance (GBA) Recomp](https://github.com/polyphase-recomps/com.recomp.gba) | Shared runtime for native GBA ports, with the GbaPlayer node that plays a decompiled game in Polyphase. |
+| [Nintendo GameCube (GCN) Recomp](https://github.com/polyphase-recomps/com.recomp.gcn) | GameCube recompilation runtime that builds decompiled GameCube games natively and plays them with the GcnPlayer node. |
 | [Nintendo 64 (N64) Recomp](https://github.com/polyphase-recomps/com.recomp.n64) | Shared runtime for natively compiled N64 decomps: libultra shim, F3DEX2 renderer, audio and host backends. |
 | [PlayStation (PS1) Recomp](https://github.com/polyphase-recomps/com.recomp.ps1) | PS1 recompilation runtime that builds fully decompiled PS1 games natively and plays them with the Ps1Player node. |
 
