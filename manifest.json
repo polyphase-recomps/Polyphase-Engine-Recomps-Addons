@@ -5,7 +5,7 @@
     "description": "Addon registry for Polyphase Engine Recomps: native runtimes for games recompiled from community decompilation projects. Machine-readable index of every recomp addon, its metadata, dependencies and download locations, so the engine and tooling never have to crawl GitHub to resolve an addon. No game code or assets are distributed; each port builds against the user's own legally obtained copy.",
     "vendor": "Polyphase Recomps",
     "homepage": "https://github.com/polyphase-recomps/Polyphase-Engine-Recomps-Addons",
-    "updated": "2026-10-07",
+    "updated": "2026-10-08",
     "packageCount": 6,
     "categories": [
         {
@@ -68,7 +68,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-07T06:45:09Z",
+            "updatedAt": "2026-10-08T01:54:26Z",
             "status": "published"
         },
         {
@@ -215,7 +215,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-07T06:25:27Z",
+            "updatedAt": "2026-10-08T05:18:09Z",
             "status": "published"
         },
         {
@@ -313,7 +313,7 @@
             },
             "latestRelease": null,
             "prebuiltBinaries": [],
-            "updatedAt": "2026-10-07T06:50:18Z",
+            "updatedAt": "2026-10-08T05:16:46Z",
             "status": "published"
         }
     ]
